@@ -3,13 +3,15 @@ require 'bundler/setup'
 require 'sinatra'
 require "sinatra/json"
 require "sinatra/content_for"
-require 'dotenv'
+
 require_relative 'goodreads'
 require_relative 'amazon'
 
-require "sinatra/reloader" if development?
-
-Dotenv.load
+if development?
+  require "sinatra/reloader"
+  require 'dotenv'
+  Dotenv.load
+end
 
 gr = Goodreads.new ENV['GOODREADS_KEY']
 
