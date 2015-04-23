@@ -17,8 +17,9 @@
           %td= book['ItemAttributes']['Author'].is_a?(Array) ? book['ItemAttributes']['Author'].join(', ') : book['ItemAttributes']['Author']
           %td= book['ItemAttributes']['Binding']
           %td 
-            - price ||= book.fetch('ItemAttributes', {}).fetch('ListPrice', {}).fetch('FormattedPrice', nil)
+            -# The order gives higher preference to offer prices
             - price ||= book.fetch('OfferSummary', {}).fetch('LowestNewPrice', {}).fetch('FormattedPrice', nil)
+            - price ||= book.fetch('ItemAttributes', {}).fetch('ListPrice', {}).fetch('FormattedPrice', nil)
             - price ||= "Unavailable"
             = price
           %td= book['ItemAttributes']['NumberOfPages']
