@@ -1,0 +1,27 @@
+- content_for :body do
+  %form{:action => "/", :method=>'POST'}
+    %fieldset
+      %label{:for=>'profile_url'} Enter Goodreads profile link
+      %input{:name=>'profile_url', :type=>'url', :size=>80, :placeholder=>"https://www.goodreads.com/user/show/6170741-abhay-rana"}
+      %label{:for=>'locale'} Amazon Store
+      %select{:name=>'locale'}
+        %option{:value=>'br'} Brazil
+        %option{:value=>'ca'} Canada
+        %option{:value=>'cn'} China
+        %option{:value=>'de'} Germany
+        %option{:value=>'es'} Spain
+        %option{:value=>'es'} Spain
+        %option{:value=>'fr'} France
+        %option{:value=>'in'} India
+        %option{:value=>'it'} Italy
+        %option{:value=>'jp'} Japan
+        %option{:value=>'uk'} United Kingdom
+        %option{:value=>'us', :selected=>'true'} United States
+      %input{:type=>'submit'}
+  %h2 What does it do?
+  %ul
+    %li Fetches your to-read list from goodreads
+    %li Matches it against Amazon
+    %li Gives you a list of books you can buy
+
+  %h3 Happy World Book Day

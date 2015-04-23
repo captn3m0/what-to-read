@@ -1,0 +1,24 @@
+- content_for :body do
+  %table
+    %thead
+      %tr
+        %th Book
+        %th Author
+        %th Binding
+        %th Cost
+        %th Pages
+    %tbody
+      - books.each do |book|
+        %tr
+          %td
+            - offers = book.fetch('Offers', {}).fetch('TotalOffers', 0)
+            %a{:href => book['DetailPageURL'], :class=>offers.to_i>0 ? 'offer':''}
+              = book['ItemAttributes']['Title']
+          %td= book['ItemAttributes']['Author'].is_a?(Array) ? book['ItemAttributes']['Author'].join(', ') : book['ItemAttributes']['Author']
+          %td= book['ItemAttributes']['Binding']
+          %td 
+            - price ||= book.fetch('ItemAttributes', {}).fetch('ListPrice', {}).fetch('FormattedPrice', nil)
+            - price ||= book.fetch('OfferSummary', {}).fetch('LowestNewPrice', {}).fetch('FormattedPrice', nil)
+            - price ||= "Unavailable"
+            = price
+          %td= book['ItemAttributes']['NumberOfPages']

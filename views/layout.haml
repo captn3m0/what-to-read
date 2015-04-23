@@ -1,0 +1,15 @@
+!!!
+%html
+  %head
+    %link{:rel => :stylesheet, :type => :"text/css", :href => "https://yegor256.github.io/tacit/tacit.min.css"}
+    %title What to read?
+  %body
+    %section
+      %header
+        %h1 What to read?
+    %section
+      %article
+        = yield_content :body
+    %section
+      %footer
+        %a{:href=>"http://github.com/captn3m0/what-to-read"} Source
