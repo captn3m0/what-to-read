@@ -3,6 +3,8 @@ require 'bundler/setup'
 require 'sinatra'
 require "sinatra/json"
 require "sinatra/content_for"
+require 'rack/pratchett'
+require 'haml'
 
 require_relative 'goodreads'
 require_relative 'amazon'
@@ -14,6 +16,7 @@ if development?
 end
 
 gr = Goodreads.new ENV['GOODREADS_KEY']
+use Rack::Pratchett
 
 get '/:uid' do
   redirect "/#{params['uid']}/us"

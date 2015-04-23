@@ -24,6 +24,7 @@ GEM
     multi_json (1.11.0)
     multi_xml (0.5.5)
     rack (1.6.0)
+    rack-pratchett (0.1.1)
     rack-protection (1.5.3)
       rack
     rack-test (0.6.3)
@@ -41,5 +42,6 @@ DEPENDENCIES
   dotenv
   haml
   httparty
+  rack-pratchett
   sinatra
   sinatra-contrib!
