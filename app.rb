@@ -19,7 +19,8 @@ gr = Goodreads.new ENV['GOODREADS_KEY']
 use Rack::Pratchett
 
 get '/:uid' do
-  redirect "/#{params['uid']}/us"
+  pass unless !!(params[:uid] =~ /\A[-+]?[0-9]+\z/)
+  redirect "/#{params[:uid]}/us"
 end
 
 get '/:uid/:locale' do
