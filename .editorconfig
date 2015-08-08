@@ -1,0 +1,12 @@
+root = true
+
+[*]
+# Extensions we have: coffee, js, yml, json
+# and follow same settings for all of these
+charset = "utf8"
+indent_style = space
+indent_size = 2
+trim_trailing_whitespace = true
+
+[*.md]
+trim_trailing_whitespace = false
