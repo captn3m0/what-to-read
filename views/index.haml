@@ -1,8 +1,8 @@
 - content_for :body do
   %form{:action => "/", :method=>'POST'}
     %fieldset
-      %label{:for=>'profile_url'} Enter Goodreads profile link
-      %input{:name=>'profile_url', :type=>'url', :size=>80, :placeholder=>"https://www.goodreads.com/user/show/6170741-abhay-rana"}
+      %label{:for=>'profile_url'} Enter any url which has list of books (or a goodreads profile):
+      %input{:name=>'profile_url', :type=>'url', :size=>80, :placeholder=>"https://news.ycombinator.com/item?id=4966230"}
       %label{:for=>'locale'} Amazon Store
       %select{:name=>'locale'}
         %option{:value=>'br'} Brazil
@@ -20,8 +20,30 @@
       %input{:type=>'submit'}
   %h2 What does it do?
   %ul
-    %li Fetches your to-read list from goodreads
-    %li Matches it against Amazon
-    %li Gives you a list of books you can buy
+    %li
+      %h4 If you give it a GoodReads profile link
+      %ul
+        %li Fetches your to-read list from goodreads
+        %li Matches it against Amazon
+        %li Gives you a list of books you can buy
+    %li
+      %h4 If you give it a link to a list of books
+      %ul
+        %li Finds all the amazon links on that page
+        %li Searches them in the amazon store of your choice
+        %li Gives you a list of books you can buy
+
+  %h2 Some sample links to try (copy paste these above)
+  %ul
+    %li
+      %a{:href=>"https://www.goodreads.com/user/show/6170741-abhay-rana"}
+        My GoodReads profile
+    %li
+      %a{:href=>"https://news.ycombinator.com/item?id=10027102"}
+        High signal/noise ratio books on HN
+
+    %li
+      %a{:href=>"https://news.ycombinator.com/item?id=4966230"}
+        Best books of Hacker News 2012
 
   %h3 Happy World Book Day
