@@ -15,4 +15,8 @@ class Goodreads
     end
     .compact.each_slice(10).to_a
   end
+
+  def get_book_ids(isbn)
+    self.class.get "/book/isbn_to_id/#{isbn}?key=#{@key}"
+  end
 end

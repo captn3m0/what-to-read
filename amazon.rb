@@ -83,16 +83,16 @@ class Amazon
     MultiXml.parse response.body
   end
 
-  def lookup(id, type='ASIN')
+  def lookup(id, type='ASIN', options = Hash.new)
     id = id.join(',') if id.is_a?(Array)
-    
+
     operation_params = {
       'IdType'=> type,
       'ItemId'=> id
-    }
+    }.merge(options)
 
     operation_params['SearchIndex'] = 'Books' if type == 'ISBN'
-    response = self.get 'ItemLookup', ['ItemIds', 'ItemAttributes', 'Offers'], operation_params
+    response = self.get 'ItemLookup', ['ItemIds', 'ItemAttributes', 'Offers', 'RelatedItems'], operation_params
 
     response['ItemLookupResponse']['Items']['Item']
   end
