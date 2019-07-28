@@ -15,7 +15,7 @@ GEM
   specs:
     addressable (2.3.8)
     ansi (1.5.0)
-    ast (2.2.0)
+    ast (2.4.0)
     backports (3.6.8)
     dotenv (2.1.1)
     haml (4.0.7)
@@ -27,7 +27,7 @@ GEM
     mime-types (1.25.1)
     multi_json (1.11.3)
     multi_xml (0.5.5)
-    oga (2.2)
+    oga (2.15)
       ast
       ruby-ll (~> 2.1)
     rack (1.6.4)
