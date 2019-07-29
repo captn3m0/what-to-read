@@ -27,12 +27,13 @@ GEM
     mime-types (1.25.1)
     multi_json (1.11.3)
     multi_xml (0.5.5)
+    mustermann (1.0.3)
     oga (2.15)
       ast
       ruby-ll (~> 2.1)
-    rack (1.6.11)
+    rack (2.0.7)
     rack-pratchett (0.1.1)
-    rack-protection (1.5.5)
+    rack-protection (2.0.5)
       rack
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -41,11 +42,12 @@ GEM
     ruby-ll (2.1.2)
       ansi
       ast
-    sinatra (1.4.7)
-      rack (~> 1.5)
-      rack-protection (~> 1.4)
-      tilt (>= 1.3, < 3)
-    tilt (2.0.2)
+    sinatra (2.0.5)
+      mustermann (~> 1.0)
+      rack (~> 2.0)
+      rack-protection (= 2.0.5)
+      tilt (~> 2.0)
+    tilt (2.0.9)
     unirest (1.1.2)
       addressable (~> 2.3.5)
       json (~> 1.8.1)
