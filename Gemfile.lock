@@ -18,7 +18,8 @@ GEM
     ast (2.4.0)
     backports (3.6.8)
     dotenv (2.7.4)
-    haml (4.0.7)
+    haml (5.1.1)
+      temple (>= 0.8.0)
       tilt
     httparty (0.17.0)
       mime-types (~> 3.0)
@@ -49,6 +50,7 @@ GEM
       rack (~> 2.0)
       rack-protection (= 2.0.5)
       tilt (~> 2.0)
+    temple (0.8.1)
     tilt (2.0.9)
     unirest (1.1.2)
       addressable (~> 2.3.5)
