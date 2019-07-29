@@ -30,9 +30,9 @@ GEM
     oga (2.15)
       ast
       ruby-ll (~> 2.1)
-    rack (1.6.4)
+    rack (1.6.11)
     rack-pratchett (0.1.1)
-    rack-protection (1.5.3)
+    rack-protection (1.5.5)
       rack
     rack-test (0.6.3)
       rack (>= 1.0)
