@@ -31,7 +31,7 @@ GEM
     multi_json (1.11.3)
     multi_xml (0.6.0)
     mustermann (1.0.3)
-    oga (2.16)
+    oga (3.0)
       ast
       ruby-ll (~> 2.1)
     rack (2.0.7)
