@@ -1,5 +1,4 @@
 require 'nokogiri'
-require 'pp'
 require 'date'
 
 def read_stats(year)

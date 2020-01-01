@@ -1,8 +1,8 @@
 source "https://rubygems.org"
-ruby '2.3.0'
+ruby '2.6.5'
 
 gem 'sinatra'
-gem 'sinatra-contrib', github: 'sinatra/sinatra-contrib'
+gem 'sinatra-contrib'
 gem 'dotenv', :groups => [:development, :test]
 gem 'httparty'
 gem 'haml'
